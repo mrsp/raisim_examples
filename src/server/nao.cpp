@@ -468,7 +468,7 @@ int main(int argc, char *argv[])
       // cout<<"COP L "<<COPL.transpose()<<" "<<LLeg_COP.transpose()<<endl;
       // cout<<"COP R "<<COPR.transpose()<<" "<<RLeg_COP.transpose()<<endl;
       raisim::Vec<3> linear_momentum = NAO->getLinearMomentum();
-      raisim::Vec<3> center_of_mass = NAO->getCompositeCOM();
+      raisim::Vec<3> center_of_mass = NAO->getCompositeCOM()[0];
 
       ZMP = COPR + COPL;
       ZMP(2) /= 2.0;
